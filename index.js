@@ -1,16 +1,16 @@
-const schedule = require("node-schedule")
+const schedule = require("node-schedule");
 
 const makeDirectories = require("./utils/makeDirectories");
 const getDate = require("./utils/getDate");
 const screenshotAndSave = require("./utils/screenshotAndSave");
 
-const stocks = ["roku", "sq", "pcg", "nio", "bzun"];
+const { cronTime, stocks } = require("./config");
 
 makeDirectories(stocks);
 
 screenshotAndSave(stocks);
 
-schedule.scheduleJob("0 30 6 * * *", function() {
+schedule.scheduleJob(cronTime, function() {
   screenshotAndSave(stocks);
 });
 
