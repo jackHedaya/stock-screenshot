@@ -1,0 +1,17 @@
+{
+  "name": "stock-screenshot",
+  "version": "1.0.0",
+  "description": "a program to screenshot certain stocks daily",
+  "main": "index.js",
+  "author": "Jack Hedaya <jackehedaya@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "pm2 start index.js --name stock-screenshot"
+  },
+  "dependencies": {
+    "nightmare": "^3.0.1",
+    "node-schedule": "^1.3.2"
+  }
+}
