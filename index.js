@@ -2,16 +2,18 @@ const schedule = require("node-schedule");
 
 const makeDirectories = require("./utils/makeDirectories");
 const getDate = require("./utils/getDate");
+const getTime = require("./utils/getTime");
 const screenshotAndSave = require("./utils/screenshotAndSave");
 
 const { cronTime, stocks } = require("./config");
 
 makeDirectories(stocks);
 
-screenshotAndSave(stocks);
-
-schedule.scheduleJob(cronTime, function() {
+function main() {
+  console.log(`[${getTime()}] Beginning screenshot saving on ${getDate()}`);
   screenshotAndSave(stocks);
-});
+}
 
-console.log(`Beginning screenshot saving on ${getDate()}`);
+main();
+
+schedule.scheduleJob(cronTime, main);
