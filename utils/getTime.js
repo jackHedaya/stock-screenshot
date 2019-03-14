@@ -1,4 +1,9 @@
+function formatHours(date) {
+  const h = date.getHours()
+  return h > 12 ? h - 12 : h;
+}
+
 module.exports = () => {
   const date = new Date();
-  return `${date.getHours() - 12}:${date.getMinutes()}:${date.getSeconds()}`
+  return `${formatHours(date)}:${date.getMinutes()}:${date.getSeconds()}`
 } 
