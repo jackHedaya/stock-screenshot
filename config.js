@@ -1,4 +1,4 @@
 module.exports = {
   stocks: ["BZUN", "SQ", "NIO", "PCG", "ROKU"],
-  cronTime: "0 30 18 * * *"
-}
+  cronTime: "30 18 * * 1-5"
+};
