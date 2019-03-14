@@ -15,7 +15,7 @@ stock-screenshot should be ran with <a href="https://github.com/Unitech/pm2">pm2
 2. yarn: `$ yarn global add pm2`<br>
    npm: `$ npm i -g pm2`
 
-You can set stocks and scheduled <a href="https://github.com/node-schedule/node-schedule">cron time</a> in `config.js`.
+You can set stocks and scheduled <a href="https://github.com/node-schedule/node-schedule#cron-style-scheduling">cron time</a> in `config.js`.
 
 3. **config.js**<br>
 ```js
