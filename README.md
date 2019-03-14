@@ -31,5 +31,5 @@ You can now have pm2 run the app.
 
 
 ## Dependencies
-+ <a href="https://github.com/segmentio/nightmare">Nightmare</a>
++ <a href="https://github.com/GoogleChrome/puppeteer">Puppeteer</a>
 + <a href="https://github.com/node-schedule/node-schedule">Node Schedule</a>
